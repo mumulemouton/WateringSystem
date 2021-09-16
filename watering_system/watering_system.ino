@@ -32,12 +32,12 @@ lcd.print("%");
 Serial.print("mieta: ");
 Serial.print(mieta);
 Serial.print("%\n");
-if (bazylia < 50) {
+if (bazylia < 70) {
     digitalWrite(K3, LOW);
   } else {
     digitalWrite(K3, HIGH);
   }
-if (mieta < 50) {
+if (mieta < 70) {
     digitalWrite(K4, LOW);
   } else {
     digitalWrite(K4, HIGH);

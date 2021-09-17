@@ -24,8 +24,6 @@ TFTscreen.setTextSize(2);
 TFTscreen.setTextColor(WHITE);
 TFTscreen.text("Bazylia:",10,50);
 TFTscreen.text("Mieta:",10,70);
-TFTscreen.text("%",140,50);
-TFTscreen.text("%",140,70);
 }
 
 void loop() {
@@ -44,9 +42,23 @@ mieta_s.toCharArray(mietaPrint, 4);
 TFTscreen.stroke(0,0,0);
 TFTscreen.text(bazyliaPrint,105,50);
 TFTscreen.text(mietaPrint,105,70);
+TFTscreen.text("%",140,50);
+TFTscreen.text("%",140,70);
 delay(250);
 TFTscreen.stroke(255,255,255);
 TFTscreen.text(bazyliaPrint,105,50);
 TFTscreen.text(mietaPrint,105,70);
+TFTscreen.text("%",140,50);
+TFTscreen.text("%",140,70);
+  if (bazylia < 70) {
+    digitalWrite(K3, LOW);
+  } else {
+    digitalWrite(K3, HIGH); 
+  }
+if (mieta < 70) {
+    digitalWrite(K4, LOW);
+  } else {
+    digitalWrite(K4, HIGH);
+  }
 delay(1);
 }

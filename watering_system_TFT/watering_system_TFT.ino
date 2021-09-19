@@ -29,6 +29,8 @@ void setup() {
 void loop() {
   int bazylia = map(analogRead(0), wet, dry, 100, 0);
   int mieta = map(analogRead(1), wet, dry, 100, 0);
+  if (mieta > 100) mieta = 100;
+  if (bazylia > 100) bazylia= 100;
   String bazylia_s = String(bazylia);
   String mieta_s = String(mieta);
     Serial.print("bazylia: ");
@@ -60,7 +62,5 @@ void loop() {
     } else {
       digitalWrite(K4, HIGH);
     }
-    if (mieta > 100) mieta = 100;
-    if (bazylia > 100) bazylia= 100;
     delay(1);
 }
